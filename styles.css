@@ -1,0 +1,282 @@
+html{
+	font-family: monospace;
+
+	height: 100%;
+}
+
+body{
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	background: url("background.png") no-repeat center center fixed;
+	background-size: cover;
+
+	overflow: hidden;
+
+	height: 100vh;
+	margin: 0;
+}
+
+.HomeButton{
+	display: inline-flex;
+
+	padding: 1.5rem;
+	margin: 0.3rem;
+
+	background-color: #3A3A3A;
+
+	align-content: center;
+	justify-content: center;
+	box-sizing: border-box;
+
+	border: none;
+	border-radius: 50%;
+
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+	transition: all 0.2s ease;
+}
+
+.HomeButton:hover{
+	margin: 0.1rem;
+
+	background-color: #505050;
+}
+
+.Main div .FormTitle{
+	color: #FF3E50;
+	background-color: #2B2B2B;
+
+	font-size: 5.5rem;
+
+	justify-content: center;
+
+	flex: 1;
+	padding: 0;
+
+	box-shadow: 0 3px 16px rgba(0, 0, 0, 0);
+	text-shadow: 3px 5px 14px rgb(0 0 0);
+}
+
+.LongLabel{
+	width: 12.5rem;
+}
+
+.SubmitButton{
+	display: flex;
+
+	background-color: #3A3A3A;
+	color: #E0E0E0;
+
+	padding: 1.5rem;
+
+	text-align: center;
+	align-items: center;
+
+	font-size: 1.8rem;
+
+	box-sizing: border-box;
+	border: none;
+	border-radius: 15px;
+
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+}
+
+.SubmitButton:hover{
+	background-color: #505050;
+	color: #FFF;
+
+	cursor: pointer;
+}
+
+.Main{
+	display: grid;
+
+	background-color: #2B2B2B;
+
+	grid-template-areas: 
+	'TitleArea TitleArea TitleArea TitleArea TitleArea TitleArea'
+	'Gamemode Gamemode Gamemode Map Map Map'
+	'Agent Agent Agent Agent Agent Agent'
+	'KillInput DeathInput AssistInput Plants Defuses FirstBloods'
+	'RoundsWon RoundsWon RoundsWon RoundsLost RoundsLost RoundsLost'
+	'DatePlayed DatePlayed MVPStatus MVPStatus RRResult RRResult'
+	'Rank Rank AVGCS AVGCS EconRating EconRating';
+
+	grid-template-rows: 
+	minmax(0, 6rem) /* Title */
+	minmax(0, 7rem) /* Gamemode | Map */
+	minmax(0, 7rem) /* Agent */
+	minmax(0, 9rem) /* Kill | Death | Assist | Plants | Defuses | First Bloods */
+	minmax(0, 10rem) /* Round Won | Round Lost */
+	minmax(0, 10rem) /* Date | MVP | RR */
+	minmax(0, 10rem); /* Rank | AVG CS | Econ */
+
+	height: calc(100% - 4rem);
+	width: 100%;
+
+	gap: 1.5rem;
+	margin: 2rem;
+	padding: 1rem;
+
+	align-content: center;
+
+	box-sizing: border-box;
+	border-radius: 20px;
+
+	box-shadow: 0 3px 20px 8px rgb(0 0 0 / 77%);
+}
+
+.Main div{
+	display: flex;
+	max-width: 160rem;
+	width: 100%;
+
+	background-color: #3A3A3A;
+	color: #E0E0E0;
+
+	gap: 1rem;
+	padding: 1.5rem;
+
+	text-align: center;
+	align-content: center;
+
+	font-size: 1.6rem;
+
+	box-sizing: border-box;
+	border-radius: 15px;
+
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+}
+
+.Main div label{
+	align-content: center;
+	text-align: left;
+
+	margin-left: 0.5rem;
+}
+
+.Main div select{
+	width: auto;
+
+	flex: 1;
+
+	text-align: center;
+	background-color: #505050;
+	color: #E0E0E0;
+	font-size: 2rem;
+
+	appearance: none;
+
+	border: none;
+	border-radius: 15px;
+
+	transition: all 0.2s ease;
+}
+
+.Main div select:hover{
+	color: #FFFFFF;
+	font-size: 3rem;
+}
+
+.Main div input{
+	margin: 0;
+	padding: 1rem;
+
+	min-width: 8rem;
+	max-width: 70rem;
+	width: 100%;
+
+	font-size: 2rem;
+	text-align: center;
+
+	background-color: #505050;
+	color: #E0E0E0;
+
+	border: none;
+	border-radius: 15px;
+
+	flex: 1;
+
+	transition: all 0.2s ease;
+}
+
+.Main div input:focus{
+	border: none;
+	outline: none;
+}
+
+.Main div input:hover{
+	font-size: 3rem;
+	color: #FFF;
+}
+
+#TitleArea{
+	grid-area: TitleArea;
+
+	background-color: #2B2B2B;
+	padding: 0;
+
+	box-shadow: 0 2px 16px rgba(0, 0, 0, 0);
+}
+
+#GamemodeSelectArea{
+	grid-area: Gamemode;
+}
+
+#MapSelectArea{
+	grid-area: Map;
+}
+
+#AgentSelectArea{
+	grid-area: Agent;
+}
+
+#KillInputArea{
+	grid-area: KillInput;
+}
+#DeathInputArea{
+	grid-area: DeathInput;
+}
+#AssistInputArea{
+	grid-area: AssistInput;
+}
+
+#RoundsWonInputArea{
+	grid-area: RoundsWon;
+}
+#RoundsLostInputArea{
+	grid-area: RoundsLost;
+}
+
+#DatePlayedInputArea{
+	grid-area: DatePlayed;
+}
+#MVPStatusInputArea{
+	grid-area: MVPStatus;
+}
+#RRResultInputArea{
+	grid-area: RRResult;
+}
+
+#AVGCSInputArea{
+	grid-area: AVGCS;
+}
+#EconRatingInputArea{
+	grid-area: EconRating;
+}
+
+#PlantsInputArea{
+	grid-area: Plants;
+}
+#DefusesInputArea{
+	grid-area: Defuses;
+}
+#FirstBloodsInputArea{
+	grid-area: FirstBloods;
+}
+
+#RankInputArea{
+	grid-area: Rank;
+}
