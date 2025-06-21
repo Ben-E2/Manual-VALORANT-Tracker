@@ -177,7 +177,12 @@ body{
 
 .Main div select:hover{
 	color: #FFFFFF;
-	font-size: 3rem;
+	font-size: 2.2rem;
+}
+
+.Main div select:focus{
+	outline: none;
+	border: none;
 }
 
 .Main div input{
