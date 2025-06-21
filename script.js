@@ -46,7 +46,7 @@ document.querySelector('.SubmitButton').addEventListener('click', (event) => {
     const a = document.createElement('a');
     a.href = url;
     const uid = `${kills}${deaths}${assists}-${Date.now()}`;
-	a.download = `match-${data.datePlayed || 'unspecified'}-${uid}.json`;
+	a.download = `${data.gamemode}-${data.datePlayed || 'unspecified'}-${uid}.json`;
     a.click();
 
     URL.revokeObjectURL(url);
